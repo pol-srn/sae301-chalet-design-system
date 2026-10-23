@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System – Le Chalet Click &amp; Collect</title>
+  <meta name="description"
+    content="Design System du click &amp; collect du restaurant Le Chalet (Limoges) : couleurs, typographie et composants.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="entete">
+    <p class="entete__surtitre">SAé 3.01 · Paul Siron</p>
+    <h1 class="entete__titre">Design System – Le Chalet</h1>
+    <p>Les couleurs, la typographie et les composants du futur site click &amp; collect du restaurant.</p>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="titre-couleurs">
+      <h2 class="section__titre" id="titre-couleurs">Couleurs</h2>
+      <ul class="nuancier">
+        <li class="nuancier__item"><span class="nuancier__pastille nuancier__pastille--or"></span>Or<code>#E5AF4A</code>
+        </li>
+        <li class="nuancier__item"><span
+            class="nuancier__pastille nuancier__pastille--caramel"></span>Caramel<code>#B58C67</code></li>
+        <li class="nuancier__item"><span class="nuancier__pastille nuancier__pastille--caramel-fonce"></span>Caramel
+          foncé<code>#8A6544</code></li>
+        <li class="nuancier__item"><span
+            class="nuancier__pastille nuancier__pastille--lin"></span>Lin<code>#DED1C3</code></li>
+        <li class="nuancier__item"><span
+            class="nuancier__pastille nuancier__pastille--creme"></span>Crème<code>#FBF7F2</code></li>
+        <li class="nuancier__item"><span
+            class="nuancier__pastille nuancier__pastille--noir"></span>Noir<code>#1E1A17</code></li>
+        <li class="nuancier__item"><span
+            class="nuancier__pastille nuancier__pastille--nuit"></span>Nuit<code>#121F29</code></li>
+        <li class="nuancier__item"><span
+            class="nuancier__pastille nuancier__pastille--vert"></span>Succès<code>#2E7D4F</code></li>
+        <li class="nuancier__item"><span
+            class="nuancier__pastille nuancier__pastille--orange"></span>Alerte<code>#A0561A</code></li>
+        <li class="nuancier__item"><span
+            class="nuancier__pastille nuancier__pastille--rouge"></span>Erreur<code>#B3261E</code></li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="titre-typo">
+      <h2 class="section__titre" id="titre-typo">Typographie</h2>
+      <div class="typo">
+        <p class="typo__h1">Titre H1 – Melodrama</p>
+        <p class="typo__h2">Titre H2 – Melodrama</p>
+        <p class="typo__h3">Titre H3 – Melodrama</p>
+        <p>Texte courant – DM Sans 16. Une cuisine qui commence dans les champs.</p>
+        <p class="typo__petit">Texte petit – DM Sans 14</p>
+        <p class="typo__prix">18,80 € – Prix, DM Sans Bold 20</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-boutons">
+      <h2 class="section__titre" id="titre-boutons">Boutons</h2>
+      <div class="section__ligne">
+        <button class="bouton bouton--principal" type="button">Ajouter au panier</button>
+        <button class="bouton bouton--principal" type="button" disabled>Indisponible</button>
+        <button class="bouton bouton--secondaire" type="button">Voir la carte</button>
+        <button class="bouton bouton--texte" type="button">Vider le panier</button>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-badges">
+      <h2 class="section__titre" id="titre-badges">Badges</h2>
+      <div class="section__ligne">
+        <span class="badge badge--disponible">Disponible</span>
+        <span class="badge badge--stock-faible">Plus que 3</span>
+        <span class="badge badge--epuise">Épuisé</span>
+        <span class="badge badge--nouveau">Nouveau</span>
+        <span class="badge badge--promo">−10 %</span>
+        <span class="badge badge--star">★ Produit star</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-navigation">
+      <h2 class="section__titre" id="titre-navigation">Navigation des catégories</h2>
+      <nav class="navigation" aria-label="Catégories de la carte">
+        <ul class="navigation__liste">
+          <li><a class="navigation__lien navigation__lien--actif" href="#entrees" aria-current="true">Les Entrées</a>
+          </li>
+          <li><a class="navigation__lien" href="#plats">Les Plats</a></li>
+          <li><a class="navigation__lien" href="#desserts">Les Desserts</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="section" aria-labelledby="titre-formulaires">
+      <h2 class="section__titre" id="titre-formulaires">Champs de formulaire</h2>
+      <div class="section__grille">
+        <div class="champ">
+          <label class="champ__libelle" for="code-promo">Code promo</label>
+          <input class="champ__saisie" id="code-promo" type="text" placeholder="Ex. CHALET10">
+        </div>
+
+        <div class="champ champ--erreur">
+          <label class="champ__libelle" for="code-faux">Code promo</label>
+          <input class="champ__saisie" id="code-faux" type="text" value="CHALET99" aria-describedby="code-faux-message">
+          <p class="champ__message" id="code-faux-message">Ce code n’existe pas.</p>
+        </div>
+
+        <div class="champ">
+          <label class="champ__libelle" for="sauce">Sauce</label>
+          <select class="champ__saisie" id="sauce">
+            <option>Choisir une sauce</option>
+            <option>Sauce au poivre (+1,60 €)</option>
+          </select>
+        </div>
+      </div>
+      <fieldset class="options">
+        <legend class="options__titre">Cuisson</legend>
+        <label class="option"><input class="option__radio" type="radio" name="cuisson" value="bleu"> Bleu</label>
+        <label class="option"><input class="option__radio" type="radio" name="cuisson" value="saignant" checked>
+          Saignant</label>
+        <label class="option"><input class="option__radio" type="radio" name="cuisson" value="a-point"> À point</label>
+        <label class="option"><input class="option__radio" type="radio" name="cuisson" value="bien-cuit"> Bien
+          cuit</label>
+      </fieldset>
+      <div class="quantite">
+        <button class="quantite__bouton" type="button" aria-label="Retirer un">−</button>
+        <label class="sr-only" for="quantite">Quantité</label>
+        <input class="quantite__valeur" id="quantite" type="number" value="1" min="1">
+        <button class="quantite__bouton" type="button" aria-label="Ajouter un">+</button>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-messages">
+      <h2 class="section__titre" id="titre-messages">Messages</h2>
+      <p class="message message--succes"><span class="message__icone" aria-hidden="true">✓</span>Code CHALET10 appliqué
+        : −10 %</p>
+      <p class="message message--alerte"><span class="message__icone" aria-hidden="true">!</span>Ce code promo a expiré
+        le 30/09.</p>
+      <p class="message message--erreur"><span class="message__icone" aria-hidden="true">✕</span>Ce code promo n’existe
+        pas.</p>
+    </section>
+
+    <section class="section" aria-labelledby="titre-cartes">
+      <h2 class="section__titre" id="titre-cartes">Cartes produit</h2>
+      <div class="section__ligne">
+        <article class="carte-produit">
+          <img class="carte-produit__visuel" src="img/burger.webp" alt="Hamburger du chef et ses frites maison"
+            width="305" height="222">
+          <div class="carte-produit__infos">
+            <h3 class="carte-produit__nom">Hamburger du chef</h3>
+            <p class="carte-produit__description">Bœuf limousin, frites maison</p>
+            <p class="carte-produit__prix">18,80 €</p>
+            <button class="bouton bouton--principal" type="button">Ajouter au panier</button>
+          </div>
+        </article>
+
+        <article class="carte-produit carte-produit--epuise">
+          <img class="carte-produit__visuel" src="img/tartare.webp" alt="Véritable tartare de bœuf" width="305"
+            height="222">
+          <span class="badge badge--epuise carte-produit__badge">Épuisé</span>
+          <div class="carte-produit__infos">
+            <h3 class="carte-produit__nom">Véritable tartare</h3>
+            <p class="carte-produit__description">200 g de bœuf limousin, frites maison</p>
+            <p class="carte-produit__prix">19,90 €</p>
+            <button class="bouton bouton--principal" type="button" disabled>Indisponible</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-onglets">
+      <h2 class="section__titre" id="titre-onglets">Onglets</h2>
+      <div class="section__ligne">
+        <a class="onglet" href="#titre-onglets">Les Entrées</a>
+        <a class="onglet onglet--actif" href="#titre-onglets" aria-current="true">Les Plats</a>
+        <a class="onglet onglet--survol" href="#titre-onglets">Les Desserts</a>
+      </div>
+      <p class="section__note">États : normal, actif, survol. Utilisés pour les catégories de la carte et les
+        onglets Description / Avis de la fiche produit.</p>
+    </section>
+
+    <section class="section" aria-labelledby="titre-header">
+      <h2 class="section__titre" id="titre-header">Header</h2>
+      <div class="header">
+        <div class="header__barre">
+          <p class="header__horaires"><span class="header__badge">Horaires</span>12h-14h, 19h30-22h30</p>
+          <img class="header__logo" src="img/logo-le-chalet.png" alt="Le Chalet" width="236" height="35">
+          <div class="header__actions">
+            <a class="header__lien" href="#titre-header"><img src="img/reservation-cloche.svg" alt="" width="24"
+                height="24">Réservation</a>
+            <a class="header__icone" href="#titre-header"><img src="img/panier-sac.svg" alt="Panier" width="24"
+                height="24"></a>
+            <button class="header__icone" type="button"><img src="img/menu-burger.svg" alt="Ouvrir le menu"
+                width="24" height="24"></button>
+          </div>
+        </div>
+        <p class="header__titre">La Carte</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-hero">
+      <h2 class="section__titre" id="titre-hero">Hero</h2>
+      <div class="hero">
+        <p class="hero__titre">Click &amp; Collect</p>
+        <p>Commandez, nous préparons, vous récupérez.</p>
+        <span class="filet" aria-hidden="true"><span class="filet__losange"></span></span>
+        <div class="hero__onglets">
+          <a class="onglet onglet--actif" href="#titre-hero" aria-current="true">Les Entrées</a>
+          <a class="onglet" href="#titre-hero">Les Plats</a>
+          <a class="onglet" href="#titre-hero">Les Desserts</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-menu">
+      <h2 class="section__titre" id="titre-menu">Menu (bandeau de catégorie)</h2>
+      <div class="menu">
+        <p class="menu__titre">Les Entrées</p>
+        <article class="carte-produit">
+          <img class="carte-produit__visuel" src="img/tartare.webp" alt="Véritable tartare de bœuf" width="305"
+            height="222">
+          <div class="carte-produit__infos">
+            <h3 class="carte-produit__nom">Véritable tartare</h3>
+            <p class="carte-produit__description">200 g de bœuf limousin, frites maison</p>
+            <p class="carte-produit__prix">19,90 €</p>
+            <button class="bouton bouton--principal" type="button">Ajouter au panier</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-footer">
+      <h2 class="section__titre" id="titre-footer">Footer</h2>
+      <div class="footer">
+        <div class="footer__logo">
+          <img src="img/logo-taureau.png" alt="Le Chalet" width="119" height="109">
+        </div>
+        <ul class="footer__navigation">
+          <li><a class="footer__lien footer__lien--actif" href="#titre-footer">Accueil</a></li>
+          <li><a class="footer__lien" href="#titre-footer">La Carte</a></li>
+          <li><a class="footer__lien" href="#titre-footer">L’équipe</a></li>
+          <li><a class="footer__lien" href="#titre-footer">Mentions légales</a></li>
+          <li><a class="footer__lien" href="#titre-footer">CGV</a></li>
+        </ul>
+        <p class="footer__copyright">© Le Chalet. Tél. : 05 55 77 51 81. 5 rue des Filles Notre-Dame, 87000 Limoges
+        </p>
+        <p class="footer__reseaux"><a class="footer__lien" href="#titre-footer">Instagram</a><span
+            class="footer__trait" aria-hidden="true"></span><a class="footer__lien" href="#titre-footer">Facebook</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-etiquette">
+      <h2 class="section__titre" id="titre-etiquette">Étiquette du plat</h2>
+      <div class="etiquette">
+        <div class="etiquette__fond">
+          <p class="etiquette__sceau">Origine<span class="filet filet--or" aria-hidden="true"><span class="filet__losange"></span></span>Bœuf<br>Limousin
+          </p>
+          <div class="etiquette__contenu">
+            <p class="etiquette__titre">Dans l’assiette</p>
+            <p class="etiquette__libelle">Allergènes</p>
+            <ul class="etiquette__allergenes">
+              <li>Gluten</li>
+              <li>Lait</li>
+              <li>Œufs</li>
+              <li>Sésame</li>
+              <li>Moutarde</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-addition">
+      <h2 class="section__titre" id="titre-addition">L’addition et champ pointillé</h2>
+      <div class="section__ligne section__ligne--haut">
+        <div class="addition">
+          <div class="addition__fond">
+            <p class="addition__titre">L’addition</p>
+            <p class="addition__ligne addition__ligne--fort">Sous-total<span class="addition__points"></span><span
+                class="addition__montant addition__montant--grand">39,00 €</span></p>
+            <div class="addition__promo">
+              <div class="pointille">
+                <label class="pointille__libelle" for="code-addition">Code promo</label>
+                <input class="pointille__saisie" id="code-addition" type="text" value="CHALET10">
+              </div>
+              <button class="bouton bouton--texte" type="button">Appliquer</button>
+            </div>
+            <p class="addition__ligne">Code CHALET10 <a class="addition__retirer" href="#titre-addition">Retirer</a><span
+                class="addition__points"></span><span class="addition__montant">−2,38 €</span></p>
+            <p class="addition__ligne">Frais de préparation<span class="addition__points"></span><span
+                class="addition__montant">2,00 €</span></p>
+            <p class="addition__aide">Plus que 12,40 € de plats pour ne plus payer de frais de préparation.</p>
+            <fieldset class="addition__modes">
+              <legend class="addition__libelle">Comment récupérer votre commande ?</legend>
+              <label class="mode mode--choisi">
+                <span class="mode__ligne"><span><input class="mode__radio" type="radio" name="mode" checked> Retrait
+                    au Chalet</span><strong>Gratuit</strong></span>
+                <span class="mode__info">5 rue des Filles Notre-Dame, du mardi au samedi aux heures d’ouverture.</span>
+              </label>
+              <label class="mode">
+                <span class="mode__ligne"><span><input class="mode__radio" type="radio" name="mode"> Livraison à
+                    Limoges</span><strong>4,90 €</strong></span>
+                <span class="mode__info">Selon le poids de votre commande : 1,15 kg</span>
+              </label>
+            </fieldset>
+            <p class="addition__ligne addition__ligne--total">Total<span class="addition__points"></span><span
+                class="addition__montant addition__montant--grand">38,62 €</span></p>
+            <button class="bouton bouton--principal" type="button">Commander</button>
+          </div>
+        </div>
+        <div class="pointille">
+          <label class="pointille__libelle" for="prenom">Prénom</label>
+          <input class="pointille__saisie" id="prenom" type="text" value="Camille">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-ardoise">
+      <h2 class="section__titre" id="titre-ardoise">Ardoise</h2>
+      <div class="ardoise">
+        <p class="ardoise__surtitre">Filtrer et trier</p>
+        <p class="ardoise__titre">Votre envie du moment</p>
+        <p class="ardoise__ligne">Petite faim<span class="ardoise__points"></span>5 plats</p>
+        <p class="ardoise__ligne">Végétarien<span class="ardoise__points"></span>3 plats</p>
+        <button class="bouton bouton--principal" type="button">Appliquer</button>
+      </div>
+      <p class="section__note">Fond noir à double filet, utilisé pour le panneau des filtres et « Composez votre
+        repas ».</p>
+    </section>
+
+    <section class="section" aria-labelledby="titre-compte">
+      <h2 class="section__titre" id="titre-compte">Espace client</h2>
+      <h3 class="section__sous-titre">Onglets compte</h3>
+      <ul class="onglets-compte">
+        <li><a class="onglet-compte onglet-compte--actif" href="#titre-compte" aria-current="page">Tableau de
+            bord</a></li>
+        <li><a class="onglet-compte" href="#titre-compte">Commandes</a></li>
+        <li><a class="onglet-compte onglet-compte--lien" href="#titre-compte">Déconnexion</a></li>
+      </ul>
+
+      <h3 class="section__sous-titre">Raccourci et carte récap</h3>
+      <div class="section__ligne">
+        <a class="raccourci" href="#titre-compte">
+          <span class="raccourci__titre">Mes commandes <span class="raccourci__fleche" aria-hidden="true">→</span></span>
+          <span class="raccourci__texte">Historique et suivi</span>
+        </a>
+        <div class="recap">
+          <p class="recap__libelle">Commande</p>
+          <p class="recap__valeur">n° 1042</p>
+        </div>
+      </div>
+
+      <h3 class="section__sous-titre">Carte commande</h3>
+      <div class="commande">
+        <dl class="commande__infos">
+          <div>
+            <dt class="commande__libelle">Commande</dt>
+            <dd class="commande__valeur">n° 1042</dd>
+          </div>
+          <div>
+            <dt class="commande__libelle">Date</dt>
+            <dd class="commande__valeur">19/10/2026</dd>
+          </div>
+          <div>
+            <dt class="commande__libelle">Mode</dt>
+            <dd>Retrait au Chalet</dd>
+          </div>
+          <div>
+            <dt class="commande__libelle">Total</dt>
+            <dd class="commande__valeur">45,20 €</dd>
+          </div>
+        </dl>
+        <div class="commande__actions">
+          <span class="badge badge--nouveau">En préparation</span>
+          <a class="bouton bouton--texte" href="#titre-compte">Voir</a>
+          <a class="bouton bouton--texte" href="#titre-compte">Facture</a>
+        </div>
+      </div>
+
+      <h3 class="section__sous-titre">Étapes de suivi</h3>
+      <ol class="suivi">
+        <li class="etape etape--faite">
+          <span class="etape__losange" aria-hidden="true"></span>
+          <span class="etape__nom">Reçue</span>
+          <span class="etape__date">19/10 · 12 h 05</span>
+        </li>
+        <li class="etape etape--en-cours">
+          <span class="etape__losange" aria-hidden="true"></span>
+          <span class="etape__nom">En préparation</span>
+          <span class="etape__date">19/10 · 12 h 10</span>
+        </li>
+        <li class="etape">
+          <span class="etape__losange" aria-hidden="true"></span>
+          <span class="etape__nom">Prête</span>
+          <span class="etape__date">vers 12 h 30</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="titre-membre">
+      <h2 class="section__titre" id="titre-membre">Carte membre</h2>
+      <article class="membre">
+        <div class="membre__photo" aria-hidden="true"><span class="membre__tete"></span><span
+            class="membre__buste"></span></div>
+        <div class="membre__corps">
+          <p class="membre__poste">Chef de cuisine</p>
+          <h3 class="membre__nom">Julien Marchand</h3>
+          <p class="membre__citation">« Le bœuf limousin mérite qu’on prenne son temps. »</p>
+          <a class="bouton bouton--secondaire" href="#titre-membre">Voir le profil</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="titre-emails">
+      <h2 class="section__titre" id="titre-emails">E-mails</h2>
+      <div class="email">
+        <div class="email__entete">
+          <img src="img/logo-le-chalet.png" alt="Le Chalet" width="240" height="35">
+        </div>
+        <p class="email__contenu">Contenu de l’e-mail de commande…</p>
+        <div class="email__pied">
+          <img src="img/logo-taureau.png" alt="" width="60" height="55">
+          <p>5 rue des Filles Notre-Dame, 87000 Limoges</p>
+          <p>05 55 77 51 81 · du mardi au samedi · 12h–14h · 19h30–22h30</p>
+          <p class="email__discret">Instagram · Facebook</p>
+          <p class="email__discret email__discret--petit">Vous recevez cet e-mail car vous avez commandé sur le site du
+            Chalet.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <p>© Le Chalet · 5 rue des Filles Notre-Dame, 87000 Limoges · Photos : Unsplash</p>
+  </footer>
+</body>
+
+</html>
